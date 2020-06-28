@@ -231,6 +231,37 @@ instalacion_alex () {
  sleep 5
 }
 
+instalacion_crossepg () {
+ temporizador
+ if [ ! -d /usr/share/crossepg/providers/ ]; then
+   echo
+   m_error "No tiene instalado crossepg en su receptor, realice la instalacion y vuelva a intentarlo"
+   sleep 5
+ else
+   wget -q http://tropical.jungle-team.online/tvheadend/crossepg.tar
+   tar xvf crossepg.tar -C /usr/share/crossepg/providers/
+   echo
+   m_correcto "Ha finalizado la instalacion de Epg Koala, espere unos segundos y volvera al menu"
+   sleep 5
+fi
+}
+
+instalacion_epgimport () {
+ temporizador
+ if [ ! -d /etc/epgimport/ ]; then
+   echo
+   m_error "No tiene instalado epg import en su receptor, realice la instalacion y vuelva a intentarlo"
+   sleep 5
+ else
+   wget -q http://tropical.jungle-team.online/tvheadend/epgimport.tar
+   tar xvf epgimport.tar -C /etc/epgimport/
+   echo
+   m_correcto "Ha finalizado la instalacion de Epg Koala, espere unos segundos y volvera al menu"
+   sleep 5
+fi
+}
+
+
 
 _Koala_menu()
 {
@@ -243,8 +274,10 @@ _Koala_menu()
 	echo -e "${blanco}2) Instalacion en Sistema${borrar} ${negrita}${verde}CoreELEC/LbreELEC TVH 4.3${borrar}"
 	echo -e "${blanco}3) Instalacion en Sistema${borrar} ${negrita}${verde}AlexELEC TVH 4.3${borrar}"
 	echo -e "${blanco}4) Instalacion en Sistema${borrar} ${negrita}${verde}Vitmod${borrar}"
+	echo -e "${blanco}5) Instalacion en Sistema${borrar} ${negrita}${verde}Enigma2 Crossepg${borrar}"
+	echo -e "${blanco}6) Instalacion en Sistema${borrar} ${negrita}${verde}Enigma2 EpgImport${borrar}"
 	echo
-	echo -e "${blanco}5) Ayuda${borrar}"
+	echo -e "${blanco}7) Ayuda${borrar}"
     echo
     echo -e "${blanco}9) Salir${borrar}"
     echo
@@ -311,6 +344,38 @@ do
             echo -e "${blanco}proximaente${borrar}"
             ;;
         5)
+			if confirmacion; then
+			    echo
+  				m_correcto "Se procede a la instalacion de koala epg"
+  				echo
+  				instalacion_crossepg
+  				
+			else
+			    echo
+  				m_error "Has cancelado la instalacion de koala epg"
+  				echo
+			fi
+			sleep 5
+			clear
+            _Koala_menu
+            ;;
+        6)
+			if confirmacion; then
+			    echo
+  				m_correcto "Se procede a la instalacion de koala epg"
+  				echo
+  				instalacion_epgimport
+  				
+			else
+			    echo
+  				m_error "Has cancelado la instalacion de koala epg"
+  				echo
+			fi
+			sleep 5
+			clear
+            _Koala_menu
+            ;;
+        7)
             _Koala_ayuda
             ;;
             
