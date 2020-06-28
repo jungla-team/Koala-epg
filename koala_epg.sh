@@ -88,7 +88,7 @@ cat << "EOF"
              | '  :      '   |  
              |  .  |   '  |  |  -- web: www.jungle-team.com
    .--._ _...:.._ _.--. ,  ' |  
-  (  ,  `        `  ,  )   . |  -- Desarrolladores: @loznic89 , @tanha_ro
+  (  ,  `        `  ,  )   . |  -- Desarrolladores: @loznic89 , @tanha_ro , Mendi/vitmod
    '-/              \-'  |   |  
      |  o   /\   o  |       :|  -- Koala epg introduce lista canales, epg y picon Movistar+
      \     _\/_     / :  '   |
