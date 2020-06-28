@@ -241,6 +241,7 @@ instalacion_crossepg () {
  else
    wget -q http://tropical.jungle-team.online/tvheadend/crossepg.tar
    tar xvf crossepg.tar -C /usr/share/crossepg/providers/
+   rm -r crossepg.tar
    echo
    m_correcto "Ha finalizado la instalacion de Epg Koala, espere unos segundos y volvera al menu"
    sleep 5
@@ -256,6 +257,7 @@ instalacion_epgimport () {
  else
    wget -q http://tropical.jungle-team.online/tvheadend/epgimport.tar
    tar xvf epgimport.tar -C /etc/epgimport/
+   rm -r epgimport.tar
    echo
    m_correcto "Ha finalizado la instalacion de Epg Koala, espere unos segundos y volvera al menu"
    sleep 5
