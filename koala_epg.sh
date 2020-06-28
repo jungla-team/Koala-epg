@@ -221,10 +221,11 @@ instalacion_alex () {
  rm -f /storage/.config/tvheadend/epgdb.v3
  rm -rf /storage/.config/tvheadend/imagecache/*
  rm -rf /storage/.config/tvheadend/epggrab/xmltv/channels/*
- systemctl stop service.tvheadend
+ rm -rf /storage/.kodi/userdata/Thumbnails/*
+ systemctl stop tvheadend
  tar xvf /storage/$epg -C /
  rm -r /storage/$epg
- systemctl restart service.tvheadend
+ systemctl restart tvheadend
  systemctl restart kodi
  echo
  m_correcto "Ha finalizado la instalacion de Epg Koala, espere unos segundos y volvera al menu"
