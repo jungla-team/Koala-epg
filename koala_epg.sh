@@ -264,6 +264,28 @@ instalacion_epgimport () {
 fi
 }
 
+instalacion_mendevil () {
+ temporizador
+ wget -q http://tropical.jungle-team.online/tvheadend/mendivitmod.tar
+ mount -o rw,remount /
+ mount -o rw,remount /system
+ rm -rf /data/tvheadend/channel/
+ rm -rf /data/tvheadend/input/
+ rm -rf /data/tvheadend/epgdb.v2
+ rm -rf /data/tvheadend/imagecache/*
+ rm -rf /data/tvheadend/epggrab/xmltv/channels/*
+ rm -rf /sdcard/Android/data/org.xbmc.kodi/files/.kodi/userdata/Thumbnails/*
+ rm -rf /sdcard/Android/data/com.semperpax.spmc/files/.spmc/userdata/Thumbnails/*
+ rm /system/xbin/tv_grab_EPGkoala 
+ rm /system/xbin/tv_grab_EPGkoalasincolores
+ stop tvheadend
+ tar xvf mendivitmod.tar -C /
+ echo
+ m_correcto "Ha finalizado la instalacion de Epg Koala, espere unos segundos y volvera al menu"
+ sleep 5
+ reboot
+}
+
 
 
 _Koala_menu()
@@ -344,8 +366,12 @@ do
             _Koala_menu
             ;;
         4)
-            echo -e "${blanco}proximaente${borrar}"
+			instalacion_mendevil
+  			sleep 5
+			clear
+            _Koala_menu
             ;;
+            
         5)
 			if confirmacion; then
 			    echo
