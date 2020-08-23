@@ -295,7 +295,6 @@ _Koala_menu()
     echo
     echo -e "${negrita}${azul}MENU INSTALACION KOALA:${borrar}"
     echo
-    echo -e "${blanco}1) Instalacion en Sistema${borrar} ${negrita}${verde}CoreELEC/LbreELEC TVH 4.2${borrar}"
 	echo -e "${blanco}2) Instalacion en Sistema${borrar} ${negrita}${verde}CoreELEC/LbreELEC TVH 4.3${borrar}"
 	echo -e "${blanco}3) Instalacion en Sistema${borrar} ${negrita}${verde}AlexELEC TVH 4.3${borrar}"
 	echo -e "${blanco}4) Instalacion en Sistema${borrar} ${negrita}${verde}Vitmod${borrar}"
