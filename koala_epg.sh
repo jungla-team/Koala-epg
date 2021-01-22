@@ -177,10 +177,10 @@ instalacion_c42 () {
  temporizador
  wget -q $url
  rm -rf /storage/.kodi/userdata/addon_data/service.tvheadend42/channel/
- rm -rf /storage/.kodi/userdata/addon_data/service.tvheadend42/input/
+ rm -rf /storage/.kodi/userdata/addon_data/service.tvheadend42/input/dvb/
  rm -f /storage/.kodi/userdata/addon_data/service.tvheadend42/epgdb.v2
  rm -rf /storage/.kodi/userdata/addon_data/service.tvheadend42/imagecache/*
- rm -rf /storage/.kodi/userdata/addon_data/service.tvheadend42/epggrab/xmltv/channels/*
+ rm -rf /storage/.kodi/userdata/addon_data/service.tvheadend42/epggrab/xmltv/channels/
  rm -rf /storage/.kodi/userdata/Thumbnails/*
  systemctl stop service.tvheadend42
  tar xvf /storage/$epg -C /
@@ -197,10 +197,10 @@ instalacion_c43 () {
  temporizador
  wget -q $url
  rm -rf /storage/.kodi/userdata/addon_data/service.tvheadend43/channel/
- rm -rf /storage/.kodi/userdata/addon_data/service.tvheadend43/input/
+ rm -rf /storage/.kodi/userdata/addon_data/service.tvheadend43/input/dvb/
  rm -f /storage/.kodi/userdata/addon_data/service.tvheadend43/epgdb.v3
  rm -rf /storage/.kodi/userdata/addon_data/service.tvheadend43/imagecache/*
- rm -rf /storage/.kodi/userdata/addon_data/service.tvheadend43/epggrab/xmltv/channels/*
+ rm -rf /storage/.kodi/userdata/addon_data/service.tvheadend43/epggrab/xmltv/channels/
  rm -rf /storage/.kodi/userdata/Thumbnails/*
  systemctl stop service.tvheadend43
  tar xvf /storage/$epg -C /
@@ -217,10 +217,10 @@ instalacion_alex () {
  temporizador
  wget -q $url
  rm -rf /storage/.config/tvheadend/channel/
- rm -rf /storage/.config/tvheadend/input/
+ rm -rf /storage/.config/tvheadend/input/dvb/
  rm -f /storage/.config/tvheadend/epgdb.v3
  rm -rf /storage/.config/tvheadend/imagecache/*
- rm -rf /storage/.config/tvheadend/epggrab/xmltv/channels/*
+ rm -rf /storage/.config/tvheadend/epggrab/xmltv/channels/
  rm -rf /storage/.kodi/userdata/Thumbnails/*
  systemctl stop tvheadend
  tar xvf /storage/$epg -C /
