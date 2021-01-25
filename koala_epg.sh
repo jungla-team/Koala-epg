@@ -175,61 +175,16 @@ fi
 instalacion_c42 () {
  lista42
  temporizador
- wget -q $url
- rm -rf /storage/.kodi/userdata/addon_data/service.tvheadend42/channel/
- rm -rf /storage/.kodi/userdata/addon_data/service.tvheadend42/input/dvb/
- rm -f /storage/.kodi/userdata/addon_data/service.tvheadend42/epgdb.v2
- rm -rf /storage/.kodi/userdata/addon_data/service.tvheadend42/imagecache/*
- rm -rf /storage/.kodi/userdata/addon_data/service.tvheadend42/epggrab/xmltv/channels/
- rm -rf /storage/.kodi/userdata/Thumbnails/*
- systemctl stop service.tvheadend42
- tar xvf /storage/$epg -C /
- rm -r /storage/$epg
- systemctl restart service.tvheadend42
- systemctl restart kodi
- echo
- m_correcto "Ha finalizado la instalacion de Epg Koala, espere unos segundos y volvera al menu"
- sleep 5
 }
 
 instalacion_c43 () {
  lista43
  temporizador
- wget -q $url
- rm -rf /storage/.kodi/userdata/addon_data/service.tvheadend43/channel/
- rm -rf /storage/.kodi/userdata/addon_data/service.tvheadend43/input/dvb/
- rm -f /storage/.kodi/userdata/addon_data/service.tvheadend43/epgdb.v3
- rm -rf /storage/.kodi/userdata/addon_data/service.tvheadend43/imagecache/*
- rm -rf /storage/.kodi/userdata/addon_data/service.tvheadend43/epggrab/xmltv/channels/
- rm -rf /storage/.kodi/userdata/Thumbnails/*
- systemctl stop service.tvheadend43
- tar xvf /storage/$epg -C /
- rm -r /storage/$epg
- systemctl restart service.tvheadend43
- systemctl restart kodi
- echo
- m_correcto "Ha finalizado la instalacion de Epg Koala, espere unos segundos y volvera al menu"
- sleep 5
 }
 
 instalacion_alex () {
  listaalex
  temporizador
- wget -q $url
- rm -rf /storage/.config/tvheadend/channel/
- rm -rf /storage/.config/tvheadend/input/dvb/
- rm -f /storage/.config/tvheadend/epgdb.v3
- rm -rf /storage/.config/tvheadend/imagecache/*
- rm -rf /storage/.config/tvheadend/epggrab/xmltv/channels/
- rm -rf /storage/.kodi/userdata/Thumbnails/*
- systemctl stop tvheadend
- tar xvf /storage/$epg -C /
- rm -r /storage/$epg
- systemctl restart tvheadend
- systemctl restart kodi
- echo
- m_correcto "Ha finalizado la instalacion de Epg Koala, espere unos segundos y volvera al menu"
- sleep 5
 }
 
 instalacion_crossepg () {
@@ -294,9 +249,6 @@ _Koala_menu()
     echo -e "${verde}__________________________________________________________________________${borrar}"
     echo
     echo -e "${negrita}${azul}MENU INSTALACION KOALA:${borrar}"
-    echo
-	echo -e "${blanco}2) Instalacion en Sistema${borrar} ${negrita}${verde}CoreELEC/LbreELEC TVH 4.3${borrar}"
-	echo -e "${blanco}3) Instalacion en Sistema${borrar} ${negrita}${verde}AlexELEC TVH 4.3${borrar}"
 	echo -e "${blanco}4) Instalacion en Sistema${borrar} ${negrita}${verde}Vitmod${borrar}"
 	echo -e "${blanco}5) Instalacion en Sistema${borrar} ${negrita}${verde}Enigma2 Crossepg${borrar}"
 	echo -e "${blanco}6) Instalacion en Sistema${borrar} ${negrita}${verde}Enigma2 EpgImport${borrar}"
