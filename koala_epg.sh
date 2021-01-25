@@ -249,6 +249,9 @@ _Koala_menu()
     echo -e "${verde}__________________________________________________________________________${borrar}"
     echo
     echo -e "${negrita}${azul}MENU INSTALACION KOALA:${borrar}"
+    echo
+	echo
+	echo
 	echo -e "${blanco}4) Instalacion en Sistema${borrar} ${negrita}${verde}Vitmod${borrar}"
 	echo -e "${blanco}5) Instalacion en Sistema${borrar} ${negrita}${verde}Enigma2 Crossepg${borrar}"
 	echo -e "${blanco}6) Instalacion en Sistema${borrar} ${negrita}${verde}Enigma2 EpgImport${borrar}"
